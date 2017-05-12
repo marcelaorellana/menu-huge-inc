@@ -1,16 +1,15 @@
-nav{
-	top:0;
+nav {
+	top: 0;
 	left: 0;
 	width: 100%;
-	color: #fff;
+	color:#fff;
 	height: 80px;
 	z-index: 1000;
-	margin-top: 0;
+	margin-top:0;
 	position: fixed;
 	padding-top: 0px;
-	background-color: red;
-	/*background: none;*/
-	transition: all 0.6s cubic-bezier(0.7, 0.01, 0.3, 1);
+	background: none;
+	transition: all 0.6s cubic-bezier(0.7,0.01,0.3,1);
 }
 
 .logo,
@@ -18,17 +17,19 @@ nav{
 	position: absolute;
 	z-index: 2000;
 }
+
 .logo{
 	left: 0;
 	top: -4px;
 	width: 70px;
 	height: 74px;
-	padding: 0.4% 2%;
+	padding:0.4% 2%;
 	text-align: left;
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
 	background-image: url(http://www.hugeinc.com/content/images/util/logo.png);
 }
+
 .menu{
 	top: 0;
 	right: 0;
@@ -39,7 +40,8 @@ nav{
 	background: #ec008c;
 	transition: all 0.3s;
 }
-.menu:before, .menu:after { 
+
+.menu:before, .menu:after{
 	content: "";
 	display: block;
 	width: 24px;
@@ -49,31 +51,31 @@ nav{
 	z-index: -1;
 }
 
-#toggle {
-     width: 104px:
-     height: 74px;
-     padding: 45px 40px;
-     z-index: 1000;
-     background-position: 50% 50%;
-     background-repeat: no-repeat;
-     cursor: pointer;
-     position: absolute;
-     top: 0;
-     right: 0;
- }
- 
 .menu:before{
 	top: -8px;
 }
+
 .menu:after{
 	top: 8px;
 }
 
-
+#toggle{
+	width: 104px;
+	height: 74px;
+	padding: 45px 40px;
+	z-index: 1000;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	cursor: pointer;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
 
 #toggle:hover .menu:before{
-	top: -9px;
+	top:-9px;
 }
+
 #toggle:hover .menu:after{
 	top: 9px;
 }
@@ -81,36 +83,39 @@ nav{
 .open .menu{
 	background: none !important;
 }
-.open.manu:after{
+
+.open .menu:after{
 	top: 0 !important;
 	background: #fff !important;
 	transform: rotate(45deg);
+
 }
-.open.manu:before{
+
+.open .menu:before{
 	top: 0 !important;
 	background: #fff !important;
 	transform: rotate(-45deg);
 }
 
-nav .nav-background{
+nav.nav-background{
 	top: 0px;
 	opacity: 0;
 	width: 100%;
 	height: 100%;
-	z-index: 1500;
+	z-index:1500;
 	display: table;
 	background: none;
 	position: absolute;
 	transition: background-color 0.6s cubic-bezier(0.7, 0.01, 0.3, 1);
 }
 
-nav .open .nav-background {
-    opacity: 1;
-    background-color: rgba(217,40,130,0.9) !important;
-    transition: background-color 0.6s cubic-bezier(0.7, 0.01, 0.3, 1);
+nav.open .nav-background{
+	opacity: 1;
+	background-color: rgba(217,40,130,0.9) !important;
+	transition: background-color 0.6s cubic-bezier(0.7, 0.01, 0.3, 1);
 }
 
-nav .open {
+nav.open {
     height: 100%;
     transition: none;
     -o-transition: none;
@@ -127,9 +132,11 @@ nav ul{
 	visibility: hidden;
 	display: table-cell;
 	vertical-align: middle;
-	transform: perspective(600px) rotateX(10s);
+	visibility: hidden;
+	transform: perspective(600px) rotateX(10deg);
 	transition: all 0.5s cubic-bezier(0.7, 0, 0.36, 0.63);
 }
+
 nav ul li{
 	visibility: hidden;
 }
@@ -139,13 +146,15 @@ nav ul li a{
 	width: 100%;
 	display: block;
 	padding: 8px 0 0;
-	letter-spacing: -0.06;
+	letter-spacing: -0.06em;
 }
+
 nav ul li a:hover{
-	color: #ec008c;
+	color:#ec008c;
 	background-color: white;
 }
-nav .open ul{
+
+nav.open ul{
 	top: 0;
 	opacity: 1;
 	margin-top: 0;
@@ -153,28 +162,32 @@ nav .open ul{
 	transform: perspective(600px) rotateX(0deg);
 }
 
-nav .open ul li{
+nav.open ul li {
 	color: #fff;
 	font-size: 60px;
 	visibility: visible !important;
 }
 
-nav .header-in{
-	background-color: rgba(217,40,130,0.9);
+nav.header-in{
+	background-color:rgba(217,40,130,0.9);
 }
 
 .solid #toggle .menu{
-	background.color: #fff;
+	background: #ec008c;
 }
+
 .solid #toggle .menu:after{
-	background.color: #fff;
+	background-color: #fff;
 }
+
 .solid #toggle .menu:before{
-	background.color: #fff;
+	background-color: #fff;
 }
+
 nav.solid #logo .logo{
 	background-image: url(http://www.hugeinc.com/content/images/util/logo_white.png);
 }
+
 .overflow-hidden{
 	overflow: hidden;
 }
